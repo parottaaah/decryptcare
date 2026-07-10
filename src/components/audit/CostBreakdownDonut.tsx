@@ -34,7 +34,7 @@ export function CostBreakdownDonut({ slices }: { slices: CostBreakdownSlice[] })
             />
           );
         })}
-        <text x="75" y="70" textAnchor="middle" className="rotate-90" fill="#171c22" fontSize="20" fontWeight="700" transform="rotate(90 75 75)">
+        <text x="75" y="70" textAnchor="middle" fill="#171c22" fontSize="20" fontWeight="700" transform="rotate(90 75 75)">
           100%
         </text>
         <text x="75" y="90" textAnchor="middle" fill="#707b89" fontSize="9" transform="rotate(90 75 75)">
