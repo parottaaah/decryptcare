@@ -3,7 +3,6 @@ import { Sidebar } from "@/components/layout/Sidebar";
 import { ChatMessageBubble } from "@/components/insights/ChatMessageBubble";
 import { ChatComposer } from "@/components/insights/ChatComposer";
 import { Badge } from "@/components/ui/Badge";
-import { Button } from "@/components/ui/Button";
 import { chatMessages as initialMessages } from "@/lib/mockData";
 import { Bell, AlertTriangle, Plus } from "lucide-react";
 import type { ChatMessage } from "@/types";
@@ -49,11 +48,6 @@ export default function InsightsPage() {
         </div>
 
         <ChatComposer onSend={sendMessage} />
-
-        <Button className="fixed bottom-24 left-6 shadow-panel" variant="primary" size="lg">
-          <Plus className="h-4 w-4" />
-          New Analysis
-        </Button>
       </div>
     </div>
   );

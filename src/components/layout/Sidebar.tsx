@@ -9,6 +9,7 @@ import {
   LifeBuoy,
   Moon,
   ShieldPlus,
+  Plus,        // ← add this
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -54,7 +55,12 @@ export function Sidebar() {
           </NavLink>
         ))}
       </nav>
-
+      <div className="px-3">
+        <button className="mb-3 flex w-full items-center justify-center gap-2 rounded-lg bg-brand-700 px-3 py-2.5 text-sm font-semibold text-white hover:bg-brand-800">
+          <Plus className="h-4 w-4" />
+          New Analysis
+       </button>
+      </div>
       <div className="space-y-1 border-t border-ink-100 px-3 py-4">
         <button className="flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-ink-500 hover:bg-ink-50">
           <LifeBuoy className="h-[18px] w-[18px]" />
