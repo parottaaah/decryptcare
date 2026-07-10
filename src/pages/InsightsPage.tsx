@@ -4,7 +4,7 @@ import { ChatMessageBubble } from "@/components/insights/ChatMessageBubble";
 import { ChatComposer } from "@/components/insights/ChatComposer";
 import { Badge } from "@/components/ui/Badge";
 import { chatMessages as initialMessages } from "@/lib/mockData";
-import { Bell, AlertTriangle, Plus } from "lucide-react";
+import { Bell, AlertTriangle } from "lucide-react";
 import type { ChatMessage } from "@/types";
 
 export default function InsightsPage() {

@@ -4,7 +4,7 @@ import { LiveDiagnosticStream } from "@/components/dashboard/LiveDiagnosticStrea
 import { DiagnosticTrends } from "@/components/dashboard/DiagnosticTrends";
 import { RecentPatientQueue } from "@/components/dashboard/RecentPatientQueue";
 import { useDashboardData } from "@/hooks/useDashboardData";
-import { Users, AlertTriangle, Target, Gauge, Plus } from "lucide-react";
+import { Users, AlertTriangle, Target, Gauge } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function DashboardPage() {
