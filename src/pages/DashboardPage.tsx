@@ -3,7 +3,6 @@ import { StatCard } from "@/components/dashboard/StatCard";
 import { LiveDiagnosticStream } from "@/components/dashboard/LiveDiagnosticStream";
 import { DiagnosticTrends } from "@/components/dashboard/DiagnosticTrends";
 import { RecentPatientQueue } from "@/components/dashboard/RecentPatientQueue";
-import { Button } from "@/components/ui/Button";
 import { useDashboardData } from "@/hooks/useDashboardData";
 import { Users, AlertTriangle, Target, Gauge, Plus } from "lucide-react";
 import { motion } from "framer-motion";
@@ -68,11 +67,6 @@ export default function DashboardPage() {
       <div className="mt-6">
         <RecentPatientQueue items={patientQueue} />
       </div>
-
-      <Button className="fixed bottom-8 left-6 shadow-panel" variant="primary" size="lg">
-        <Plus className="h-4 w-4" />
-        New Analysis
-      </Button>
     </AppShell>
   );
 }
