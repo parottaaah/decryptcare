@@ -43,14 +43,14 @@ export default function AuditPage() {
         <Card>
           <CardContent className="p-5">
             <p className="text-xs text-ink-400">Total Bill</p>
-            <p className="mt-2 text-2xl font-bold text-ink-900">₹{(auditSummary.totalBill / 1000).toFixed(2)}L</p>
+            <p className="mt-2 text-2xl font-bold text-ink-900">₹{(auditSummary.totalBill / 100_000).toFixed(2)}L</p>
             <p className="mt-2 text-xs text-emerald-600">↗ +12% vs avg</p>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-5">
             <p className="text-xs text-ink-400">Est. Fair Cost</p>
-            <p className="mt-2 text-2xl font-bold text-ink-900">₹{(auditSummary.estFairCost / 1000).toFixed(2)}L</p>
+            <p className="mt-2 text-2xl font-bold text-ink-900">₹{(auditSummary.estFairCost / 100_000).toFixed(2)}L</p>
             <p className="mt-2 text-xs text-ink-400">Benchmark</p>
           </CardContent>
         </Card>
