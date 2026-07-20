@@ -8,12 +8,29 @@ import { Users, AlertTriangle, Target, Gauge } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function DashboardPage() {
-  const { data, isLoading } = useDashboardData();
+  const { data, isLoading, isError, refetch } = useDashboardData();
 
-  if (isLoading || !data) {
+  if (isLoading) {
     return (
       <AppShell>
         <div className="animate-pulse text-sm text-ink-400">Loading clinical overview…</div>
+      </AppShell>
+    );
+  }
+
+  if (isError || !data) {
+    return (
+      <AppShell>
+        <div className="flex flex-col items-center justify-center gap-3 py-20 text-center">
+          <p className="text-sm font-medium text-ink-700">Couldn't load the clinical overview.</p>
+          <p className="text-sm text-ink-400">Check your connection and try again.</p>
+          <button
+            onClick={() => refetch()}
+            className="rounded-lg bg-ink-900 px-4 py-2 text-sm font-medium text-white hover:bg-ink-800"
+          >
+            Retry
+          </button>
+        </div>
       </AppShell>
     );
   }
