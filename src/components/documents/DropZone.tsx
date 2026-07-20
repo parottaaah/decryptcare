@@ -58,25 +58,25 @@ export function DropZone({ onFilesAccepted }: DropZoneProps) {
       <p className="mt-1 text-sm text-ink-400">Securely upload clinical documents for AI analysis.</p>
 
       <div className="mt-5 flex items-center gap-3">
-        <label className="flex cursor-pointer items-center gap-2 rounded-lg border border-ink-200 bg-white px-4 py-2 text-sm font-medium text-ink-700 hover:bg-ink-50">
+        <label className="relative flex cursor-pointer items-center gap-2 rounded-lg border border-ink-200 bg-white px-4 py-2 text-sm font-medium text-ink-700 hover:bg-ink-50 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand-500 has-[:focus-visible]:ring-offset-2">
           <Camera className="h-4 w-4" />
           Camera Sync
           <input
             type="file"
             accept="image/*"
             capture="environment"
-            className="hidden"
+            className="absolute h-px w-px overflow-hidden opacity-0"
             onChange={(e) => handleFiles(e.target.files)}
           />
         </label>
-        <label className="flex cursor-pointer items-center gap-2 rounded-lg border border-ink-200 bg-white px-4 py-2 text-sm font-medium text-ink-700 hover:bg-ink-50">
+        <label className="relative flex cursor-pointer items-center gap-2 rounded-lg border border-ink-200 bg-white px-4 py-2 text-sm font-medium text-ink-700 hover:bg-ink-50 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand-500 has-[:focus-visible]:ring-offset-2">
           <FolderOpen className="h-4 w-4" />
           Browse Files
           <input
             type="file"
             multiple
             accept=".pdf,.jpg,.jpeg,.png"
-            className="hidden"
+            className="absolute h-px w-px overflow-hidden opacity-0"
             onChange={(e) => handleFiles(e.target.files)}
           />
         </label>
